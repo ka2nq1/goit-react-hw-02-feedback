@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FeedbackOptions from '../feedbackOptions/FeedbackOptions';
 import Statistics from '../statistics/Statistics';
+import styles from './App.module.css';
 
 export default class App extends Component {
     state = {
@@ -23,7 +24,7 @@ export default class App extends Component {
 
     handleBad = () => {
         this.setState({
-            bad: this.state.bad + 1
+            bad: this.state.bad + 1 
         })
     };
 
@@ -37,8 +38,10 @@ export default class App extends Component {
 
     render() {
         return (
-            <>
+            <div className={styles.container}>
+                <h2 className={styles.tytle}>Please leave feedback</h2>
                 <FeedbackOptions good={this.handleGood} neutral={this.handleNeutral} bad={this.handleBad} />
+                <h2 className={styles.tytle}>Statistics</h2>
                 {this.countTotalFeedback() ? (
                     <Statistics
                         good={this.state.good}
@@ -46,8 +49,8 @@ export default class App extends Component {
                         bad={this.state.bad}
                         total={this.countTotalFeedback()}
                         positivePercentage={this.countPositiveFeedbackPercentage()}
-                    />) : (<span>No feedback given</span>)}
-            </>
+                    />) : (<span className={styles.noFeedback}>No feedback given</span>)}
+            </div>
         );
     };
 };

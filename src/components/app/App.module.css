@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #131419;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  align-items: center;
+  background: #131419;
+  margin: 100px auto;
+  padding: 40px 40px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tytle {
+  color: #c7c7c7;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.tytle:nth-child(n + 2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.noFeedback {
+  color: #32a3b1;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}

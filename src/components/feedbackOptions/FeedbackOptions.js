@@ -1,13 +1,14 @@
 import React from 'react';
+import styles from './FeedbackOptions.module.css';
 
 export default function FeedbackOptions({good, neutral, bad}) {
         return (
         <div>
-            <button type='increment' onClick={good}>
+            <button className={styles.btn} type='increment' onClick={good}>
                 Good</button>
-            <button type='increment' onClick={neutral}>
+            <button className={styles.btn} type='increment' onClick={neutral}>
                 Neutral</button>
-            <button type='increment' onClick={bad}>
+            <button className={styles.btn} type='increment' onClick={bad}>
                 Bad</button>
         </div>
     );
